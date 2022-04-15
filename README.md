@@ -1,5 +1,7 @@
 # Solana Account Balance crate
 
+[![crates-io](https://img.shields.io/badge/crates.io-v0.1.0-blue)](https://crates.io/crates/solana-account-balance)
+
 solana-account-balance is a simple library crate to fetch Account Balance from Solana Clusters.
 The library supports fetching account balance from following Clusters:
 
@@ -9,7 +11,21 @@ The library supports fetching account balance from following Clusters:
 
 This library uses [`solana-sdk`](https://crates.io/crates/solana-sdk) and [`solana-client`](https://crates.io/crates/solana-client) crates as dependencies to connect with solana cluster and get account balance.
 
-# Usage
+## Build
+
+**Build library**
+
+```bash
+$ cargo build
+```
+
+**Running Tests**
+
+```bash
+$ cargo test
+```
+
+## Usage
 
 - Include `solana-account-balance` as dependency in Cargo.toml file.
 
