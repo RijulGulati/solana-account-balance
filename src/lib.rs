@@ -3,7 +3,7 @@
 use std::str::FromStr;
 
 use solana_client::rpc_client::RpcClient;
-use solana_program::pubkey::Pubkey;
+use solana_sdk::pubkey::Pubkey;
 
 /// Contains Account balance in Lamports and SOL.
 #[derive(Debug)]
