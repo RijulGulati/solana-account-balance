@@ -1,0 +1,15 @@
+[package]
+name = "solana-account-balance"
+version = "0.1.0"
+edition = "2021"
+authors = ["Rijul Gulati <rijul@rijulgulati.com>"]
+license = "MIT"
+description = "Library crate to fetch Account Balance from Solana Clusters (Mainnet/Testnet/Devnet)."
+repository = "https://github.com/RijulGulati/solana-account-balance"
+readme = "README.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+solana-client = "1.10.8"
+solana-program = "1.10.8"
