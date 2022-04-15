@@ -45,9 +45,8 @@ pub fn get_solana_balance(pubkey: &str, cluster: Cluster) -> Result<SolanaBalanc
     let pubkey = match Pubkey::from_str(pubkey) {
         Ok(key) => key,
         Err(err) => {
-            println!("{:?}", err);
             return Err(SolanaError {
-                error: String::from("invalid pubkey"),
+                error: err.to_string(),
             });
         }
     };
@@ -62,7 +61,6 @@ pub fn get_solana_balance(pubkey: &str, cluster: Cluster) -> Result<SolanaBalanc
         }
 
         Err(err) => {
-            println!("{:?}", err);
             return Err(SolanaError {
                 error: err.to_string(),
             });
@@ -72,6 +70,8 @@ pub fn get_solana_balance(pubkey: &str, cluster: Cluster) -> Result<SolanaBalanc
 
 #[cfg(test)]
 mod tests {
+    use solana_sdk::pubkey::ParsePubkeyError;
+
     use super::*;
 
     const CORRECT_ACC_ADDRESS: &str = "9aavjzd4iAbiJHawgS7kunfCJefSRRVKso61vzAX9Ho5";
@@ -90,7 +90,7 @@ mod tests {
         let result = get_solana_balance(INCORRECT_ACC_ADDRESS, Cluster::Devnet)
             .err()
             .unwrap();
-        assert_eq!(result.error, "invalid pubkey");
+        assert_eq!(result.error, ParsePubkeyError::WrongSize.to_string());
     }
 
     #[test]
