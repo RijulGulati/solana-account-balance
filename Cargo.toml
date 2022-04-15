@@ -7,7 +7,7 @@ license = "MIT"
 description = "Library crate to fetch Account Balance from Solana Clusters (Mainnet/Testnet/Devnet)."
 repository = "https://github.com/RijulGulati/solana-account-balance"
 readme = "README.md"
-keywords = ["solana", "blockchain", "account", "balance", "library"]
+keywords = ["solana", "blockchain"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
