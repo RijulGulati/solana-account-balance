@@ -7,11 +7,28 @@ The library supports fetching account balance from following Clusters:
 - Testnet
 - Devnet
 
-The crate is available at [crates.io]().
+This library uses [`solana-sdk`](https://crates.io/crates/solana-sdk) and [`solana-client`](https://crates.io/crates/solana-client) crates as dependencies to connect with solana cluster and get account balance.
 
-## Usage
+# Usage
 
-To be updated
+- Include `solana-account-balance` as dependency in Cargo.toml file.
+
+```toml
+[dependencies]
+solana-account-balance = "0.1.0"
+```
+
+- Example code
+
+```rust
+use solana_account_balance::Cluster;
+
+fn main() {
+    let pubkey = "9aavjzd4iAbiJHawgS7kunfCJefSRRVKso61vzAX9Ho5";
+    let balance = solana_account_balance::get_solana_balance(pubkey, Cluster::Devnet.unwrap();
+    println!("{:?}", balance);
+}
+```
 
 # License
 
