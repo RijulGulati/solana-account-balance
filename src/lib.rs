@@ -76,7 +76,7 @@ mod tests {
 
     const CORRECT_ACC_ADDRESS: &str = "9aavjzd4iAbiJHawgS7kunfCJefSRRVKso61vzAX9Ho5";
     const INCORRECT_ACC_ADDRESS: &str = "wrongaddress";
-    const ACCOUNT_NOT_FOUND: &str = "9aavjzd4iAbiJHawgS7kunfCJefSRRVKso61vzAX9Ho6"; // notice 6 at the end
+    const ACCOUNT_NOT_FOUND: &str = "888vjzd4iAbiJHawgS7kunfCJefSRRVKso61vzAX9111";
 
     #[test]
     fn get_balance() {
